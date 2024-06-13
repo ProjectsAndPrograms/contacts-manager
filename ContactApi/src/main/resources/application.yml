@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: Contact-Api
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/contact_api?useSSL=false
+    username: root
+    password: 
+
+  jpa:
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  
+  mvc:
+    throw-exception-if-no-handler-found: true
+    async:
+      request-timeout: 3600000
+      
+      
+server:
+  port: 8080
+  error: 
+    path: /user/error
+    whitelabel:
+      enabled: false
