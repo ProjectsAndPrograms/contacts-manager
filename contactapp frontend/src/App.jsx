@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     getAllContacts();
-  }, []);
+  }, [data]);
 
   const handleNewContact = async (event) => {
     event.preventDefault();
@@ -69,13 +69,14 @@ function App() {
   }
 
   const updateContact = async (contact) => {
-    const {data} = await saveContact(contact);
-    console.log(data);
+    await saveContact(contact);
+    getAllContacts();
   }
 
   const updateImage = async (formData) => {
     try {
-      const {data : photoUrl} = await updatePhoto(formData);
+      await updatePhoto(formData);
+      getAllContacts();
     } catch (error) { 
       console.error(error); 
       toastError(error.message);
