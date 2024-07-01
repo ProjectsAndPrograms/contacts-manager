@@ -1,6 +1,6 @@
 # contacts-manager
 It is an contact manager to manage our contacts. Created using spring boot on backend and react js on frontend.
-
+ 
 ## Technologies used
    1. Java
    2. Spring boot
