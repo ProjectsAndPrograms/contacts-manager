@@ -43,7 +43,7 @@ It is an contact manager to manage our contacts. Created using spring boot on ba
 CREATE DATABASE `contact_api`;
 ```
    <br>
-   
+      
  <b>Step-3 :</b> Run your application <br>
    <b>right click on your project name -> Run As -> Spring boot App</b>
    <br><br>
